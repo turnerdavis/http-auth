@@ -45,8 +45,8 @@ class Basic extends Base {
     // Processes line from authentication file.
     processLine (userLine) {
         let lineSplit = userLine.split(":");
-        let username = lineSplit.shift();
-        let hash = lineSplit.join(":");
+        let username = lineSplit[0];
+        let hash = lineSplit[1];
 
         // Push user.
         this.options.users.push({username: username, hash: hash});
